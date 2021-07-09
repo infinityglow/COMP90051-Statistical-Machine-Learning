@@ -1,0 +1,331 @@
+%%%%%%%%%%%%  Generated using docx2latex.com  %%%%%%%%%%%%%%
+
+%%%%%%%%%%%%  v2.0.0-beta  %%%%%%%%%%%%%%
+
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{latexsym}
+\usepackage{amsfonts}
+\usepackage[normalem]{ulem}
+\usepackage{soul}
+\usepackage{array}
+\usepackage{amssymb}
+\usepackage{extarrows}
+\usepackage{graphicx}
+\usepackage[backend=biber,
+style=numeric,
+sorting=none,
+isbn=false,
+doi=false,
+url=false,
+]{biblatex}\addbibresource{bibliography-biblatex.bib}
+
+\usepackage{subfig}
+\usepackage{wrapfig}
+\usepackage{wasysym}
+\usepackage{enumitem}
+\usepackage{adjustbox}
+\usepackage{ragged2e}
+\usepackage[svgnames,table]{xcolor}
+\usepackage{tikz}
+\usepackage{longtable}
+\usepackage{changepage}
+\usepackage{setspace}
+\usepackage{hhline}
+\usepackage{multicol}
+\usepackage{tabto}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{fancyhdr}
+\usepackage[toc,page]{appendix}
+\usepackage[hidelinks]{hyperref}
+\usetikzlibrary{shapes.symbols,shapes.geometric,shadows,arrows.meta}
+\tikzset{>={Latex[width=1.5mm,length=2mm]}}
+\usepackage{flowchart}\usepackage[paperheight=11.69in,paperwidth=8.27in,left=1.0in,right=1.0in,top=1.5in,bottom=1.5in,headheight=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\TabPositions{0.5in,1.0in,1.5in,2.0in,2.5in,3.0in,3.5in,4.0in,4.5in,5.0in,5.5in,6.0in,}
+
+\urlstyle{same}
+
+\renewcommand{\_}{\kern-1.5pt\textunderscore\kern-1.5pt}
+
+ %%%%%%%%%%%%  Set Depths for Sections  %%%%%%%%%%%%%%
+
+% 1) Section
+% 1.1) SubSection
+% 1.1.1) SubSubSection
+% 1.1.1.1) Paragraph
+% 1.1.1.1.1) Subparagraph
+
+
+\setcounter{tocdepth}{5}
+\setcounter{secnumdepth}{5}
+
+
+ %%%%%%%%%%%%  Set Depths for Nested Lists created by \begin{enumerate}  %%%%%%%%%%%%%%
+
+
+\setlistdepth{9}
+\renewlist{enumerate}{enumerate}{9}
+		\setlist[enumerate,1]{label=\arabic*)}
+		\setlist[enumerate,2]{label=\alph*)}
+		\setlist[enumerate,3]{label=(\roman*)}
+		\setlist[enumerate,4]{label=(\arabic*)}
+		\setlist[enumerate,5]{label=(\Alph*)}
+		\setlist[enumerate,6]{label=(\Roman*)}
+		\setlist[enumerate,7]{label=\arabic*}
+		\setlist[enumerate,8]{label=\alph*}
+		\setlist[enumerate,9]{label=\roman*}
+
+\renewlist{itemize}{itemize}{9}
+		\setlist[itemize]{label=$\cdot$}
+		\setlist[itemize,1]{label=\textbullet}
+		\setlist[itemize,2]{label=$\circ$}
+		\setlist[itemize,3]{label=$\ast$}
+		\setlist[itemize,4]{label=$\dagger$}
+		\setlist[itemize,5]{label=$\triangleright$}
+		\setlist[itemize,6]{label=$\bigstar$}
+		\setlist[itemize,7]{label=$\blacklozenge$}
+		\setlist[itemize,8]{label=$\prime$}
+
+
+
+ %%%%%%%%%%%%  Header here  %%%%%%%%%%%%%%
+
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{ }
+\renewcommand{\headrulewidth}{0pt}
+\setlength{\topsep}{0pt}\setlength{\parindent}{0pt}
+
+ %%%%%%%%%%%%  This sets linespacing (verticle gap between Lines) Default=1 %%%%%%%%%%%%%%
+
+
+\renewcommand{\arraystretch}{1.3}
+
+
+%%%%%%%%%%%%%%%%%%%% Document code starts here %%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{document}
+\setlength{\parskip}{3.0pt}
+\begin{adjustwidth}{0.29in}{0.0in}
+\begin{Center}
+{\fontsize{10pt}{12.0pt}\selectfont \textbf{Jianeng\ Li\ (1175332)\ \ \ \ \ \ \ \ \ \ \ \ \ \ Yixuan\ Liang\ (1094908)\ \ \ \ \ \ \       Hongzhi Fu (1058170)}\par}
+\end{Center}
+\end{adjustwidth}
+
+\setlength{\parskip}{6.0pt}
+\begin{justify}
+{\fontsize{13pt}{15.6pt}\selectfont \textbf{1 Introduction}}
+\end{justify}
+\begin{justify}
+This report discusses 8 prediction methods our team used for the authorship link prediction task in project 1. The task is to predict future collaborations between different authors based on previous relationships. Unlike other machine learning tasks, to maximise the use of graph information in the link prediction task, all the methods we used in this project is based on the graph structure from the training data given. 
+\end{justify}
+\begin{justify}
+{\fontsize{13pt}{15.6pt}\selectfont \textbf{2 Related work }}
+\end{justify}
+\begin{justify}
+Many works have been conducted on finding a representation for the graph in an unsupervised manner. Embedding methods such as node2vec (Grover $\&$  Leskovec, 2016) provides a good feature representation of the graph structure by maximizing the likelihood of preserving network neighborhoods of nodes. On other hand, some traditional feature engineering methods are also used to represent the node information in a graph. In 2007, Liben‐Nowell, D., $\&$  Kleinberg, J.\textcolor[HTML]{222222}{ proposed several measures for solving link-prediction problems (}Liben‐Nowell, D., $\&$  Kleinberg, J., 2007\textcolor[HTML]{222222}{), including common neighbors, Jaccard’s coefficient, preferential attachment, adamic-adar, etc.}
+\end{justify}
+\begin{justify}
+{\fontsize{13pt}{15.6pt}\selectfont \textbf{3 Data and Data preprocessing}}
+\end{justify}
+\setlength{\parskip}{3.0pt}
+\begin{justify}
+\textbf{3.1 Data}
+\end{justify}
+\begin{justify}
+A text file containing 9311 lines is given as the training data for the task. Each line in the file represents a collaboration between the authors in that line. For instance, a line with ‘1 2 3’ represents three edges in the graph, ‘1-2’, ‘1-3’, and ‘2-3’. We end up extracting 16034 edges, representing collaborations, and 3767 nodes, representing authors, in the graph. 
+\end{justify}
+\begin{justify}
+\textbf{3.2 Data preprocessing}
+\end{justify}
+\begin{justify}
+\textbf{3.2.1 Label definition}
+\end{justify}
+\begin{justify}
+Since only very limited training samples are given, we would use all the edges given to be our positive data in the supervised task. We pick non-existed edges between two randomly picked nodes as our negative samples. In order to get a balanced dataset, we repeat this process 16034 times and have the same amount of negative samples. The disadvantage is that this approach would make our model biased since the randomly picked edges might be positive in reality but we forced it to be negative when training our model. 
+\end{justify}
+\begin{justify}
+\textbf{3.2.2 Data leakage}
+\end{justify}
+\begin{justify}
+In this supervised task, we need to separate the data into training samples and validation samples. Since we are utilising graph information in our models, two graphs should be constructed in the process. We have one graph containing only nodes and edges in the training dataset, i.e., we remove the edges and nodes in the validation set, and another graph containing all the information given in the text file. This will prevent data leakage in the training process and avoid overfitting. 
+\end{justify}
+\setlength{\parskip}{6.0pt}
+\begin{justify}
+{\fontsize{13pt}{15.6pt}\selectfont \textbf{4 Feature extraction methods }}
+\end{justify}
+\setlength{\parskip}{3.0pt}
+\begin{justify}
+\textbf{4.1Embedding}
+\end{justify}
+\begin{justify}
+Node2Vec (Grover $\&$  Leskovec, 2016) is an algorithm for feature learning which preserves neighborhood objectives in networks. Based on the Deepwalk (\textcolor[HTML]{222222}{Perozzi et al., 2013}) approach and the idea of Word2Vec (\textcolor[HTML]{222222}{Mikolov et al., 2014}) embedding, Node2Vec combines the Breadth-first Sampling (BFS) and Depth-first Sampling (DFS) techniques into a flexible biased random walk procedure to generate sequences for graph representation and embeds them into lower dimensional vector spaces. LINE (Tang et al., 2015) is also a feature embedding technique for large networks. The approach learns d-dimensional feature representations in two separate phases, capturing both first-order proximity and second-order proximity, i.e., the local pairwise proximity between two vertices and the similarity between their neighborhood network structures. 
+\end{justify}
+\begin{justify}
+\textbf{4.2 Link prediction similarity metrics }
+\end{justify}
+\begin{justify}
+In our experiment, we attempted to extract 6 different features to represent information between two nodes in a graph, namely, common neighbors, shortest path, Jaccard coefficient, resource allocation index , adamic adar index and preferential attachment. After applying logistic regression, multi-layer perceptron, XGBoost, GBDT and stacking techniques with the combination of these 6 features.
+\end{justify}
+\setlength{\parskip}{6.0pt}
+\begin{justify}
+{\fontsize{13pt}{15.6pt}\selectfont \textbf{5. Feature Engineering}}
+\end{justify}
+\setlength{\parskip}{3.0pt}
+\begin{justify}
+\textbf{5.1 Graph Construction}
+\end{justify}
+\begin{justify}
+Since we have extracted all pairs of authorship information represented by edges, we need to construct a graph based on the edge information. Networkx provides a method {\fontsize{9pt}{10.8pt}\selectfont Graph.read\_edgelist() }that generates a graph given a list of all edges, so that feature extraction method is easier to extract features, such as shortest path, common neighbors, etc.
+\end{justify}
+\begin{justify}
+\textbf{5.2 Logistic Regression}
+\end{justify}
+\begin{justify}
+We used all 6 features to build a logistic regression model as our baseline model. After fitting the model, we found there is a large gap between the AUC score on validation set and on the public leaderboard, which logistic regression substantially overfits our training data.
+\end{justify}
+\begin{justify}
+\textbf{5.3 Multi-Layer Perceptron}
+\end{justify}
+\begin{justify}
+Multi-layer perceptron (MLP) is another non-linear classifier that outperforms logistic regression. The result shown in Table 1 demonstrates MLP also overfits the validation set, but achieves a higher AUC score on the test set.
+\end{justify}
+\begin{justify}
+\textbf{5.4 Decision Tree}
+\end{justify}
+\begin{justify}
+We also employed decision tree models as the baseline to classify whether there is a link between two nodes. One of the most popular techniques in tree models is based on gradient descent to build an optimal tree. Two types of decision trees are used. One is a normal gradient-based decision tree (GBDT), and another is XGBoost, where the latter maximizes the utility of computation resources. The test AUC scores in Table 1 confirm that GBDT and XGBoost are two powerful decision tree models.
+\end{justify}
+\begin{justify}
+\textbf{5.1.5 Stacking}
+\end{justify}
+\begin{justify}
+Stacking is an ensemble method that builds a classifier of several base classifiers, i.e the output of the base classifier is the input of the stacking model to predict the final probability, and we selected MLP, GBDT and XGBoost as three base classifiers. The final result shows the stacking model achieves a slightly higher AUC score, compared with base classifiers.
+\end{justify}
+\begin{justify}
+{\fontsize{13pt}{15.6pt}\selectfont \textbf{6. Experiments}}
+\end{justify}
+
+\vspace{\baselineskip}
+
+
+%%%%%%%%%%%%%%%%%%%% Table No: 1 starts here %%%%%%%%%%%%%%%%%%%%
+
+
+\begin{table}[H]
+ 			\centering
+\begin{tabular}{p{0.88in}p{1.28in}p{1.37in}p{1.43in}}
+\hline
+%row no:1
+\multicolumn{1}{|p{0.88in}}{\Centering {\fontsize{9pt}{10.8pt}\selectfont Data type}} & 
+\multicolumn{1}{|p{1.28in}}{\Centering {\fontsize{9pt}{10.8pt}\selectfont Variants}} & 
+\multicolumn{1}{|p{1.37in}}{\Centering {\fontsize{9pt}{10.8pt}\selectfont AUC on Public leaderboard}} & 
+\multicolumn{1}{|p{1.43in}|}{\Centering {\fontsize{9pt}{10.8pt}\selectfont AUC on Private leaderboard}} \\
+\hhline{----}
+%row no:2
+\multicolumn{1}{|p{0.88in}}{\multirowcell{2}{}{\begin{tabular}{p{0.88in}}\Centering {\fontsize{9pt}{10.8pt}\selectfont Embedding}\\\end{tabular}}} & 
+\multicolumn{1}{|p{1.28in}}{\Centering {\fontsize{9pt}{10.8pt}\selectfont Embedding data [unweighted node2vec]}} & 
+\multicolumn{1}{|p{1.37in}}{\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.8224}} & 
+\multicolumn{1}{|p{1.43in}|}{\Centering {\fontsize{9pt}{10.8pt}\selectfont -}} \\
+\hhline{----}
+%row no:3
+\multicolumn{1}{|p{0.88in}}{\multirow{1}{*}{\begin{tabular}{p{0.88in}}\end{tabular}}} & 
+\multicolumn{1}{|p{1.28in}}{\Centering {\fontsize{9pt}{10.8pt}\selectfont Embedding data [weighted node2vec]}} & 
+\multicolumn{1}{|p{1.37in}}{\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.8462}} & 
+\multicolumn{1}{|p{1.43in}|}{\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.8401}} \\
+\hhline{----}
+%row no:4
+\multicolumn{1}{|p{0.88in}}{\multirow{1}{*}{\begin{tabular}{p{0.88in}}\end{tabular}}} & 
+\multicolumn{1}{|p{1.28in}}{\Centering {\fontsize{9pt}{10.8pt}\selectfont Embedding data [LINE]}} & 
+\multicolumn{1}{|p{1.37in}}{\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.7713}} & 
+\multicolumn{1}{|p{1.43in}|}{\Centering {\fontsize{9pt}{10.8pt}\selectfont -}} \\
+\hhline{----}
+%row no:5
+\multicolumn{1}{|p{0.88in}}{\multirow{1}{*}{\begin{tabular}{p{0.88in}}\Centering {\fontsize{9pt}{10.8pt}\selectfont Manually Extracted Features}\\\end{tabular}}} & 
+\multicolumn{1}{|p{1.28in}}{\Centering {\fontsize{9pt}{10.8pt}\selectfont Logistic Regression}} & 
+\multicolumn{1}{|p{1.37in}}{\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.8334}} & 
+\multicolumn{1}{|p{1.43in}|}{\Centering {\fontsize{9pt}{10.8pt}\selectfont -}} \\
+\hhline{----}
+%row no:6
+\multicolumn{1}{|p{0.88in}}{\multirow{1}{*}{\begin{tabular}{p{0.88in}}\end{tabular}}} & 
+\multicolumn{1}{|p{1.28in}}{\Centering {\fontsize{9pt}{10.8pt}\selectfont MLP}} & 
+\multicolumn{1}{|p{1.37in}}{\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.8515}} & 
+\multicolumn{1}{|p{1.43in}|}{\Centering {\fontsize{9pt}{10.8pt}\selectfont -}} \\
+\hhline{----}
+%row no:7
+\multicolumn{1}{|p{0.88in}}{\multirow{1}{*}{\begin{tabular}{p{0.88in}}\end{tabular}}} & 
+\multicolumn{1}{|p{1.28in}}{\Centering {\fontsize{9pt}{10.8pt}\selectfont XGBoost}} & 
+\multicolumn{1}{|p{1.37in}}{\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.8203}} & 
+\multicolumn{1}{|p{1.43in}|}{\Centering {\fontsize{9pt}{10.8pt}\selectfont -}} \\
+\hhline{----}
+%row no:8
+\multicolumn{1}{|p{0.88in}}{\multirow{1}{*}{\begin{tabular}{p{0.88in}}\end{tabular}}} & 
+\multicolumn{1}{|p{1.28in}}{\Centering {\fontsize{9pt}{10.8pt}\selectfont GBDT}} & 
+\multicolumn{1}{|p{1.37in}}{\Centering {\fontsize{9pt}{10.8pt}\selectfont \textcolor[HTML]{212121}{0.8253}}} & 
+\multicolumn{1}{|p{1.43in}|}{\Centering {\fontsize{9pt}{10.8pt}\selectfont \textcolor[HTML]{212121}{-}}} \\
+\hhline{----}
+%row no:9
+\multicolumn{1}{|p{0.88in}}{\multirow{1}{*}{\begin{tabular}{p{0.88in}}\end{tabular}}} & 
+\multicolumn{1}{|p{1.28in}}{\Centering {\fontsize{9pt}{10.8pt}\selectfont Stacking}} & 
+\multicolumn{1}{|p{1.37in}}{\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.8595}} & 
+\multicolumn{1}{|p{1.43in}|}{\Centering {\fontsize{9pt}{10.8pt}\selectfont 0.8228}} \\
+\hhline{----}
+
+\end{tabular}
+ \end{table}
+
+
+%%%%%%%%%%%%%%%%%%%% Table No: 1 ends here %%%%%%%%%%%%%%%%%%%%
+
+
+\vspace{\baselineskip}
+\begin{Center}
+Table 1 Performance on Public and Private Leaderboard
+\end{Center}
+\setlength{\parskip}{3.96pt}
+{\fontsize{13pt}{15.6pt}\selectfont \textbf{7 Discussion }}
+\begin{justify}
+In our embedding as feature experiments, we found that the best result comes from feature embedding using node2Vec on weight graphs. Node2Vec embeddings utilise the weights in the graph for generating random walks, which adds additional information to the vector space compared to the ones using unweighted graphs, hence the improvement of results. The result from using LINE as embedding features has the least satisfying outcome among the three, since the method cannot be tuned for optimal performance. This is aligned with the original paper when Node2Vec is introduced. We are aware of bias introduced by our sampling strategy. Thus, we did additional experiments on different sampling of the negative data and stacked results from them. The score for the stacked result is not satisfactory on the leaderboard at first, but achieved our highest score after all the results are published.  
+\end{justify}
+\begin{justify}
+Feature engineering is a promising way to build a high-accuracy model, because the extracted features can be as a good representation of node information. Since the limited number of features and easy to obtain these features by feature extractor, the training procedure has less time complexity compared with embedding method. Another finding is that the shortest path feature makes a greatest contribution to the final AUC score, but our final submitted model is the combination of 6 features, in case of overfitting.
+\end{justify}
+
+\vspace{\baselineskip}
+\begin{justify}
+{\fontsize{14pt}{16.8pt}\selectfont \textbf{Reference }}
+\end{justify}
+\begin{justify}
+\textcolor[HTML]{222222}{Grover, A., $\&$  Leskovec, J. (2016, August). node2vec: Scalable feature learning for networks. In \textit{Proceedings of the 22nd ACM SIGKDD international conference on Knowledge discovery and data mining} (pp. 855-864).}
+\end{justify}
+
+\vspace{\baselineskip}
+\begin{justify}
+\textcolor[HTML]{222222}{Mikolov, T., Chen, K., Corrado, G., $\&$  Dean, J. (2013). Efficient estimation of word representations in vector space. \textit{arXiv preprint arXiv:1301.3781}.}
+\end{justify}
+
+\vspace{\baselineskip}
+\begin{justify}
+\textcolor[HTML]{222222}{Perozzi, B., Al-Rfou, R., $\&$  Skiena, S. (2014, August). Deepwalk: Online learning of social representations. In \textit{Proceedings of the 20th ACM SIGKDD international conference on Knowledge discovery and data mining} (pp. 701-710).}
+\end{justify}
+
+\vspace{\baselineskip}
+\begin{justify}
+\textcolor[HTML]{222222}{Tang, J., Qu, M., Wang, M., Zhang, M., Yan, J., $\&$  Mei, Q. (2015, May). Line: Large-scale information network embedding. In \textit{Proceedings of the 24th international conference on world wide web} (pp. 1067-1077).}
+\end{justify}
+
+\vspace{\baselineskip}
+\begin{justify}
+\textcolor[HTML]{222222}{Liben‐Nowell, D., $\&$  Kleinberg, J. (2007). The link‐prediction problem for social networks. \textit{Journal of the American society for information science and technology}, \textit{58}(7), 1019-1031.}
+\end{justify}
+
+\vspace{\baselineskip}
+\printbibliography
+\end{document}
